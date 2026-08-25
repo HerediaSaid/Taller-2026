@@ -48,6 +48,8 @@ git commit -m "Estilizado final con Bootstrap"
 git branch -M main
 git remote add origin <URL-de-tu-repositorio>
 git push -u origin main
+## Autor
+Proyecto realizado por Heredia Said
 ```
 
 Ajustá el orden y el contenido de los commits a como realmente fuiste trabajando.
