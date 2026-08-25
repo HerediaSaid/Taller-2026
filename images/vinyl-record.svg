@@ -1,0 +1,18 @@
+<svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de un disco de vinilo">
+  <circle cx="180" cy="180" r="178" fill="#0f0c09"/>
+  <circle cx="180" cy="180" r="178" fill="none" stroke="#2a231a" stroke-width="1"/>
+  <g fill="none" stroke="#2c2419" stroke-width="1">
+    <circle cx="180" cy="180" r="160"/>
+    <circle cx="180" cy="180" r="145"/>
+    <circle cx="180" cy="180" r="130"/>
+    <circle cx="180" cy="180" r="115"/>
+    <circle cx="180" cy="180" r="100"/>
+    <circle cx="180" cy="180" r="88"/>
+  </g>
+  <circle cx="180" cy="180" r="72" fill="#e8a33d"/>
+  <circle cx="180" cy="180" r="72" fill="none" stroke="#6b2737" stroke-width="3"/>
+  <text x="180" y="163" text-anchor="middle" font-family="monospace" font-size="11" letter-spacing="2" fill="#1c1712">SURCO RECORDS</text>
+  <text x="180" y="188" text-anchor="middle" font-family="serif" font-size="16" font-weight="700" fill="#1c1712">Side A</text>
+  <text x="180" y="204" text-anchor="middle" font-family="monospace" font-size="8" letter-spacing="1" fill="#1c1712">33⅓ RPM · STEREO</text>
+  <circle cx="180" cy="180" r="6" fill="#1c1712"/>
+</svg>

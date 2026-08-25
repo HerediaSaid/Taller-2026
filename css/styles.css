@@ -1,0 +1,204 @@
+/* ===========================================================
+   Surco — hoja de estilos
+   Paleta:
+   --vinyl-black  #1C1712  fondo principal
+   --label-amber  #E8A33D  acento primario (etiqueta de disco)
+   --felt-teal    #3E6259  acento secundario (fieltro del plato)
+   --sleeve-cream #F2EAD8  texto claro / fondos claros
+   --burgundy     #6B2737  hover / detalle
+   =========================================================== */
+
+:root {
+  --vinyl-black: #1c1712;
+  --vinyl-black-soft: #241d16;
+  --label-amber: #e8a33d;
+  --felt-teal: #3e6259;
+  --sleeve-cream: #f2ead8;
+  --burgundy: #6b2737;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--vinyl-black);
+  color: var(--sleeve-cream);
+  font-family: "Inter", sans-serif;
+  line-height: 1.65;
+}
+
+h1, h2, h3, .display-font {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.label-font {
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+a { color: var(--label-amber); }
+a:hover { color: var(--burgundy); }
+
+/* ---------- Navbar: estilizada como el lomo de una funda ---------- */
+.navbar-surco {
+  background-color: var(--vinyl-black-soft);
+  border-bottom: 1px solid rgba(242, 234, 216, 0.12);
+}
+.navbar-surco .navbar-brand {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--sleeve-cream);
+}
+.navbar-surco .nav-link {
+  font-family: "Space Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sleeve-cream);
+  padding: 0.5rem 1rem !important;
+  transition: color 0.25s ease;
+}
+.navbar-surco .nav-link:hover,
+.navbar-surco .nav-link.active {
+  color: var(--label-amber);
+}
+
+/* ---------- Clase personalizada #1: chip tipo etiqueta de vinilo ---------- */
+.label-chip {
+  display: inline-block;
+  background-color: var(--label-amber);
+  color: var(--vinyl-black);
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+}
+
+/* ---------- Clase personalizada #2: divisor tipo surco ---------- */
+.groove-divider {
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(242, 234, 216, 0.35) 0px,
+    rgba(242, 234, 216, 0.35) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  margin: 2.5rem 0;
+  border: none;
+}
+
+/* ---------- Clase personalizada #3: tarjeta de contenido ---------- */
+.sleeve-card {
+  background-color: var(--vinyl-black-soft);
+  border: 1px solid rgba(242, 234, 216, 0.1);
+  border-radius: 10px;
+  padding: 1.75rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.sleeve-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--label-amber);
+}
+
+/* ---------- Disco animado (elemento firma) ---------- */
+.vinyl-wrap {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.vinyl-record {
+  animation: spin 10s linear infinite;
+  animation-play-state: paused;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+}
+.vinyl-wrap:hover .vinyl-record,
+.vinyl-record.spinning {
+  animation-play-state: running;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vinyl-record { animation: none; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid rgba(242, 234, 216, 0.1);
+}
+.btn-amber {
+  background-color: var(--label-amber);
+  color: var(--vinyl-black);
+  font-family: "Space Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+.btn-amber:hover {
+  background-color: var(--burgundy);
+  color: var(--sleeve-cream);
+  transform: translateY(-2px);
+}
+.btn-outline-teal {
+  background-color: transparent;
+  color: var(--sleeve-cream);
+  border: 1px solid var(--felt-teal);
+  font-family: "Space Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 4px;
+  transition: background-color 0.25s ease;
+}
+.btn-outline-teal:hover {
+  background-color: var(--felt-teal);
+  color: var(--sleeve-cream);
+}
+
+/* ---------- Footer ---------- */
+.footer-surco {
+  background-color: var(--vinyl-black-soft);
+  border-top: 1px solid rgba(242, 234, 216, 0.1);
+  padding: 2rem 0;
+  font-family: "Space Mono", monospace;
+  font-size: 0.78rem;
+  color: rgba(242, 234, 216, 0.6);
+}
+
+/* ---------- Formulario de contacto ---------- */
+.form-control-surco {
+  background-color: var(--vinyl-black-soft);
+  border: 1px solid rgba(242, 234, 216, 0.2);
+  color: var(--sleeve-cream);
+  border-radius: 6px;
+}
+.form-control-surco:focus {
+  background-color: var(--vinyl-black-soft);
+  color: var(--sleeve-cream);
+  border-color: var(--label-amber);
+  box-shadow: 0 0 0 0.2rem rgba(232, 163, 61, 0.25);
+}
+.form-label-surco {
+  font-family: "Space Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sleeve-cream);
+}
+
+.text-amber { color: var(--label-amber); }
+.text-teal { color: var(--felt-teal); }
+.bg-soft { background-color: var(--vinyl-black-soft); }
